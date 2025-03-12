@@ -1,6 +1,6 @@
 import pytest
 
-from utils import add_two_numbers
+from utils.utils import add_two_numbers
 
 
 class TestAddTwoNumbers:
@@ -25,15 +25,15 @@ class TestAddTwoNumbers:
             add_two_numbers(number1, number2)
 
     @pytest.mark.parametrize(
-        'number1, number2, expected_result',
+        "number1, number2, expected_result",
         [
             (2, 3, 5),
-            ('23', '23', 46),
-            ('0', 0, 0),
-            ('0', 0, 0),
-            ('0', 0, 0),
-            ('0', 0, 0),
-        ]
+            ("23", "23", 46),
+            ("0", 0, 0),
+            ("0", 0, 0),
+            ("0", 0, 0),
+            ("0", 0, 0),
+        ],
     )
     def test_success(self, number1, number2, expected_result):
         actual_result = add_two_numbers(number1, number2)
