@@ -8,8 +8,10 @@ class Book:
         self.inn: uuid.UUID = uuid.uuid4()
 
     def __str__(self):
-        return (f"<Book {self.book_title} and the authr {self.author_name},"
-                f"the id of this book is {self.inn}>")
+        return (
+            f"<Book {self.book_title} and the authr {self.author_name},"
+            f"the id of this book is {self.inn}>"
+        )
 
 
 class Library:
@@ -23,6 +25,3 @@ class Library:
     def remove_book(self, book=Book):
         for book.inn in self.list_of_books:
             self.list_of_books.remove(book)
-
-
-

@@ -1,7 +1,7 @@
 class TestLibrary:
 
     def test_library_name(self, library):
-        assert library.library_name == 'The Library Of Congress'
+        assert library.library_name == "The Library Of Congress"
 
     def test_library_list_of_books(self, library):
         assert library.list_of_books == []
