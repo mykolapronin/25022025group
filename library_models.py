@@ -15,13 +15,17 @@ class Book:
 
 
 class Library:
-    def __init__(self, library_name: str, list_of_books: list):
+    def __init__(self, library_name: str):
         self.library_name = library_name
-        self.list_of_books = list_of_books
+        self.list_of_books: list[Book] = []
 
-    def add_book(self, book=Book):
-        self.list_of_books.append(book)
-
-    def remove_book(self, book=Book):
+    def add_book(self, book_inn, book):
         for book.inn in self.list_of_books:
-            self.list_of_books.remove(book)
+            if book.inn == book_inn:
+                self.list_of_books.append(book)
+
+    def remove_book(self, book_inn, book):
+        for book.inn in self.list_of_books:
+            if book.inn == book_inn:
+                self.list_of_books.remove(book)
+                break

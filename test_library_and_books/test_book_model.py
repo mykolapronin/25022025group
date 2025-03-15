@@ -1,18 +1,15 @@
 class TestBook:
-    def test_book(self, book):
-        assert book.inn
-        assert book.author_name
-        assert book.book_title
 
-    def test_inn_in_book(self, book, another_book):
-        assert book.inn != another_book.inn
+    def test_book_title(self, book):
+        assert book.book_title == "The Greatest Party"
+
+    def test_books_author(self, book):
+        assert book.author_name == "Nikola"
 
 
-class TestBook2:
-    def test_new_book(self, book):
-        assert book.inn
-        assert book.author_name
-        assert book.book_title
+class TestAnotherBook:
+    def test_another_book_title(self, another_book):
+        assert another_book.book_title == "After party"
 
-    def test_inn_in_book(self, book, another_book):
-        assert book.inn != another_book.inn
+    def test_another_book_author(self, another_book):
+        assert another_book.author_name == "Gabe"
