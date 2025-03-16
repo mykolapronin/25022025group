@@ -1,7 +1,12 @@
+PHONY: test
+test:
+	@echo 'tests started...'
+	@set PYTHONPATH=. && python -m pytest . -v
+
 
 PHONY: check
-check:
-	echo '1234'
+check: test
+	echo 'code linters started...'
 	black .
 	isort .
 	flake8 .
