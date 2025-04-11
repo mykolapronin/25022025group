@@ -51,4 +51,3 @@ r = redis.Redis(
 # for message in pubsub.listen():
 #     print(message)
 
-
