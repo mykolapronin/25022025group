@@ -17,6 +17,26 @@ r = redis.Redis(
 # r.set('myKeyFavCar', 'nissan gtr 34')
 # r.set('myLovelyPet', 'Dog named Sam(i miss you)')
 # r.expire('myLovelyPet', 7200)
-r.lpush('listOfProducts', 'coffee', 'tea')
+# Now list
+
+# r.lpush('myList', 'coffee', 'tea')
+# exp_at = datetime.datetime(year=2025, month=4, day=19, hour=3)
+# r.expireat('myList', exp_at)
+
+# Now dictionary
+
+# r.hset('products_for_cake', mapping={"flour": 250, "milk": 500})
+# r.hset('products_for_cake', mapping={"sugar": 500})
+
+# r.delete('products_for_cake')
+
+
+# SUBSCRIBE
+
+# pubsub = r.pubsub()
+# r.publish('school', 'контрольна робота')
+# r.publish('school', 'робота')
+# r.publish('school', 'неробота')
+
 
 
